@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: atlas_ui_wheel
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 0
+      compressionQuality: 0
+      maxTextureSize: 0
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 086790ab485b44542bc51b449e7d14f0, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 90cd95c0cdb0c44dda6044dc34af02e6, type: 3}
+  - {fileID: 21300000, guid: 750cc131b50254cf4be1be4ff8774588, type: 3}
+  - {fileID: 21300000, guid: 3679d5b19f25e42e6a12fe0b5c6c3a5d, type: 3}
+  - {fileID: 21300000, guid: 8f1a96853058e46cd8a538215b98fff1, type: 3}
+  - {fileID: 21300000, guid: 75b07616adf094fd3b6700dd1a0acd24, type: 3}
+  - {fileID: 21300000, guid: 0d8ecaa90f78c4ae5b114e29c1819486, type: 3}
+  - {fileID: 21300000, guid: 7ebc90affb0944762be758a29abb1edd, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ui_spin_bronze_base
+  - ui_spin_golden_base
+  - ui_spin_generic_button
+  - ui_spin_bronze_indicator
+  - ui_spin_silver_base
+  - ui_spin_golden_indicator
+  - ui_spin_silver_indicator
+  m_RenderDataMap: {}
+  m_Tag: atlas_ui_wheel
+  m_IsVariant: 0
