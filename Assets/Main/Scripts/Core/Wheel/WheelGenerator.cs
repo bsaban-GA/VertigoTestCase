@@ -62,6 +62,7 @@ namespace Vertigo.TestCase.Core
 
         #region Reward Methods
 
+        //Sets the rewards for this spin, with respect to their weights (how likely they can occur)
         private List<RewardStack> PickRewards(ZoneInfo zone, IReadOnlyList<RewardPoolEntry> pool, int count)
         {
             var candidates = pool.Where(entry => entry.Item != null).ToList();

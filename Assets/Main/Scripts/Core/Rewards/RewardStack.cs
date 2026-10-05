@@ -25,5 +25,7 @@ namespace Vertigo.TestCase.Core
             Item = item;
             Amount = amount;
         }
+        
+        public RewardStack WithAmount(int amount) => new RewardStack(Item, amount);
     }
 }

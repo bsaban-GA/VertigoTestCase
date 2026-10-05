@@ -13,7 +13,6 @@ namespace Vertigo.TestCase.Core
     {
         #region Reward Data Variables
 
-        [SerializeField, Tooltip("Stable save key. Shouldn't be changed after release or saved amounts might be lost")] private string id;
         [SerializeField] private string displayName;
         [SerializeField] private Sprite icon;
 
@@ -21,19 +20,9 @@ namespace Vertigo.TestCase.Core
 
         #region Public Accessors
 
-        public string Id => id;
         public string DisplayName => displayName;
         public Sprite Icon => icon;
 
         #endregion
-
-#if UNITY_EDITOR
-        private void OnValidate()
-        {
-            if (string.IsNullOrEmpty(id))
-                id = name;
-        }
-#endif
-
     }
 }
