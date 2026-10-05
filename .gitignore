@@ -114,3 +114,9 @@ InitTestScene*.unity*
 
 # macOS
 .DS_Store
+
+# Personal study guides (not part of the submission)
+/Guides/
+
+# JetBrains Rider project settings
+.idea/

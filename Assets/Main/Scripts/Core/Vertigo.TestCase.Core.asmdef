@@ -1,0 +1,14 @@
+{
+	"name": "Vertigo.TestCase.Core",
+	"rootNamespace": "Vertigo.TestCase.Core",
+	"references": [],
+	"includePlatforms": [],
+	"excludePlatforms": [],
+	"allowUnsafeCode": false,
+	"overrideReferences": false,
+	"precompiledReferences": [],
+	"autoReferenced": true,
+	"defineConstraints": [],
+	"versionDefines": [],
+	"noEngineReferences": false
+}
