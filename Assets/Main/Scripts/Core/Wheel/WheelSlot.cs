@@ -6,9 +6,9 @@ namespace Vertigo.TestCase.Core
 {
     public enum WheelSlotType
     {
-        Reward,
-        Bomb,
-        Empty
+        Reward, //For the reward slots
+        Bomb, //For the bomb slot
+        Empty //For the slot when player land son the bomb, then revives (bomb's slot will be empty and guarantee to not land)
     }
 
     public readonly struct WheelSlot
