@@ -41,5 +41,17 @@ namespace Vertigo.TestCase.Core
         public IReadOnlyList<RewardPoolEntry> RewardPool => rewardPool;
 
         #endregion
+
+#if UNITY_EDITOR
+        //Warns in the editor if the pool can't fill the wheel, instead of failing at runtime
+        private void OnValidate()
+        {
+            //Every reward slot shows a different item: 7 for a bomb wheel, 8 otherwise
+            var required = containsBomb ? WheelGenerator.SlotCount - 1 : WheelGenerator.SlotCount;
+            var distinctItems = rewardPool.Where(entry => entry.Item != null).Select(entry => entry.Item).Distinct().Count();
+            if (distinctItems < required)
+                Debug.LogWarning($"{name}: reward pool has {distinctItems} distinct items, needs at least {required}.", this);
+        }
+#endif
     }
 }

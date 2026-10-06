@@ -31,7 +31,8 @@ namespace Vertigo.TestCase.Core
         public RewardItemDefinition Item => item;
         public int Weight => weight;
         public int MinAmount => minAmount;
-        public int MaxAmount => maxAmount;
+        //Never below MinAmount, so a wrong Inspector value can't break the random range
+        public int MaxAmount => Mathf.Max(minAmount, maxAmount);
         public bool ScaleWithZone => scaleWithZone;
 
         #endregion

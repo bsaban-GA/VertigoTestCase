@@ -14,7 +14,7 @@ namespace Vertigo.TestCase.Core
     {
         #region Cost Variables
 
-        [SerializeField, Tooltip("The first cost of reviving")] private int baseCost = 25;
+        [SerializeField, Min(1), Tooltip("The first cost of reviving")] private int baseCost = 25;
         [SerializeField, Min(1f), Tooltip("The cost multiplier of each revive")] private float costMultiplier = 2f;
         [SerializeField, Min(1), Tooltip("The max amount of cost player will give in order to revive")] private int maxCost = 1000;
 

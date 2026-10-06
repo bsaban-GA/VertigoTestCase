@@ -47,6 +47,9 @@ namespace Vertigo.TestCase.Tests
         public static int FirstRewardIndex(Wheel wheel) =>
             Enumerable.Range(0, wheel.Slots.Count).First(i => wheel.Slots[i].Type == WheelSlotType.Reward);
 
+        // Registers an object created outside TestData so DestroyAll cleans it up too.
+        public static void Track(Object obj) => Created.Add(obj);
+
         public static void DestroyAll()
         {
             foreach (var obj in Created)
