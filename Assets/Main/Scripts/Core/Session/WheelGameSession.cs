@@ -95,7 +95,7 @@ namespace Vertigo.TestCase.Core
         }
 
         //Applies the outcome decided in Spin. Called when the animation ends or is skipped.
-        public void RevolveSpin()
+        public void ResolveSpin()
         {
             EnsureState(GameState.Spinning);
             var result = _pendingSpin;
@@ -120,7 +120,7 @@ namespace Vertigo.TestCase.Core
 
         #region Game Result Methods
 
-        //Runs when player tries to leave, if they acn leave, then they collect their rewards
+        //Runs when player tries to leave, if they can leave, then they collect their rewards
         public void Leave()
         {
             if(!CanLeave)
@@ -189,7 +189,7 @@ namespace Vertigo.TestCase.Core
                 throw new InvalidOperationException($"This action is not allowed in state {State}.");
         }
 
-        //A method that controls ands sets the state changes, invokes StateChanged
+        //A method that controls and sets the state changes, invokes StateChanged
         private void SetState(GameState state)
         {
             if (State == state)

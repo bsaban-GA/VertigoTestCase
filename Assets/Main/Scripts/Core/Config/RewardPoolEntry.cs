@@ -11,7 +11,7 @@ namespace Vertigo.TestCase.Core
     /// </summary>
     
     [Serializable]
-    public class RewardPoolEntry : MonoBehaviour
+    public sealed class RewardPoolEntry
     {
         #region Reward Item Variables
         [SerializeField, Tooltip("The reward item definition of the reward item")] private RewardItemDefinition item;

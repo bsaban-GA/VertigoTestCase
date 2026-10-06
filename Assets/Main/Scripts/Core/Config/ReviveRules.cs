@@ -10,7 +10,7 @@ namespace Vertigo.TestCase.Core
     /// </summary>
     
     [Serializable]
-    public class ReviveRules : MonoBehaviour
+    public sealed class ReviveRules
     {
         #region Cost Variables
 

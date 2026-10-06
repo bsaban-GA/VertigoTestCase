@@ -16,7 +16,7 @@ namespace Vertigo.TestCase.Core
     {
         #region Game Config Variables
 
-        [SerializeField, Tooltip("Teh zone rules")] private ZoneRules zoneRules = new ZoneRules();
+        [SerializeField, Tooltip("The zone rules")] private ZoneRules zoneRules = new ZoneRules();
 
         [Header("Wheels")] 
         [SerializeField] private WheelDefinition normalWheel;

@@ -10,7 +10,7 @@ namespace Vertigo.TestCase.Core
     /// These rewards are at the risk of landing a bomb and loosing them all
     /// </summary>
     
-    public class RunRewards : MonoBehaviour
+    public sealed class RunRewards
     {
         #region Reward Stack Variables (Item + number of item that wheel slot stores)
 
