@@ -18,7 +18,7 @@ namespace Vertigo.TestCase.UI
         [SerializeField] private Image _dim;
         [SerializeField] private RectTransform _animatedRoot;
         [SerializeField] private CanvasGroup _animatedGroup;
-        [SerializeField, Range(0f, 1f)] private float _dimAlpha;
+        [SerializeField, Range(0f, 1f)] private float _dimAlpha = 0.85f;
         [SerializeField, Min(0f)] private float _duration = 0.25f;
 
         private Sequence _sequence;

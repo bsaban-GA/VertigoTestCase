@@ -48,7 +48,7 @@ namespace Vertigo.TestCase.UI
         #region Layout Variables
 
         [Header("Layout")] [SerializeField, Range(0f, 1f), Tooltip("Chamber distance from the center as a fraction")]
-        private float _slotRadius = 0.5f;
+        private float _slotRadius = 0.59f;
 
         #endregion
 
