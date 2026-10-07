@@ -4,9 +4,15 @@ using UnityEngine;
 
 namespace Vertigo.TestCase.UI
 {
+    /// <summary>
+    /// Finds a child by name and stores its component (Used in OnValidate to fill button references, since document
+    /// clearly says "Button references should be automatically set from OnValidate Editor codes"
+    /// </summary>
+    
     public static class UIBinding
     {
-        private static void BindChild<T>(this Component owner, ref T field, string childName) where T : Component
+        //Editor-time helper for OnValidate: finds a child by exact name and caches its component in the field.
+        public static void BindChild<T>(this Component owner, ref T field, string childName) where T : Component
         {
             if (field != null && field.name == childName)
                 return;
