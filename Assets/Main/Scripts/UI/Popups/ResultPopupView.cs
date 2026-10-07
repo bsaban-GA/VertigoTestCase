@@ -8,6 +8,10 @@ using Vertigo.TestCase.Core;
 
 namespace Vertigo.TestCase.UI
 {
+    /// <summary>
+    /// The end of run popup
+    /// </summary>
+    
     public class ResultPopupView : PopupView
     {
         #region Reference Variabls
