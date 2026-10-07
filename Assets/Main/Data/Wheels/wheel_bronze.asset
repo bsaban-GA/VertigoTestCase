@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc0dd6aa4ff040f4a71bb03fabce351, type: 3}
+  m_Name: wheel_bronze
+  m_EditorClassIdentifier: 
+  baseSprite: {fileID: 21300000, guid: 90cd95c0cdb0c44dda6044dc34af02e6, type: 3}
+  indicatorSprite: {fileID: 21300000, guid: 8f1a96853058e46cd8a538215b98fff1, type: 3}
+  title: BRONZE SPIN
+  subtitle: Collect rewards, dodge the bomb!
+  containsBomb: 1
+  rewardPool:
+  - item: {fileID: 11400000, guid: 5abe033bf1e004127a35f55339c32e29, type: 2}
+    weight: 30
+    minAmount: 100
+    maxAmount: 300
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: b9cbaa1275341466085e003d8c0c7d26, type: 2}
+    weight: 20
+    minAmount: 5
+    maxAmount: 15
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: 0e7c80ab27965406d873109f5a0fa572, type: 2}
+    weight: 20
+    minAmount: 5
+    maxAmount: 10
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: f31956b59effa46d5b018fb8457310e7, type: 2}
+    weight: 20
+    minAmount: 5
+    maxAmount: 10
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: 09681f018cb304ac1a933fb9bee2ae5a, type: 2}
+    weight: 20
+    minAmount: 5
+    maxAmount: 10
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: 02f112287ac9e4978a5d86762af52893, type: 2}
+    weight: 15
+    minAmount: 5
+    maxAmount: 10
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: 2051dedf0687a48b99c70e61b7a87cca, type: 2}
+    weight: 15
+    minAmount: 1
+    maxAmount: 1
+    scaleWithZone: 0
+  - item: {fileID: 11400000, guid: e09d75b48fec14e838657d6b899b8e22, type: 2}
+    weight: 15
+    minAmount: 1
+    maxAmount: 3
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: c20d9d28e45f740138633446697161c0, type: 2}
+    weight: 12
+    minAmount: 1
+    maxAmount: 2
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: 5574712d56e8c4b62a0b10f6a3c07e41, type: 2}
+    weight: 12
+    minAmount: 1
+    maxAmount: 3
+    scaleWithZone: 1
+  - item: {fileID: 11400000, guid: 9483f4388c07e4f8a91710658d1351fb, type: 2}
+    weight: 10
+    minAmount: 1
+    maxAmount: 1
+    scaleWithZone: 0
+  - item: {fileID: 11400000, guid: 7d250b17655774822b61d8d5a5c8bdf1, type: 2}
+    weight: 8
+    minAmount: 1
+    maxAmount: 1
+    scaleWithZone: 0
+  - item: {fileID: 11400000, guid: 24833745ebdae4a1cba328dbbc75d238, type: 2}
+    weight: 3
+    minAmount: 1
+    maxAmount: 1
+    scaleWithZone: 0
