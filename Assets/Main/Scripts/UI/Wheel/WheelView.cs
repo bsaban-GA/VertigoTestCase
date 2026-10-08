@@ -50,6 +50,12 @@ namespace Vertigo.TestCase.UI
         [Header("Layout")] [SerializeField, Range(0f, 1f), Tooltip("Chamber distance from the center as a fraction")]
         private float _slotRadius = 0.59f;
 
+        [Header("Feedback")]
+        [SerializeField, Min(0f)] private float _bombShakeDuration = 0.5f;
+        [SerializeField, Min(0f)] private float _bombShakeStrength = 24f;
+
+        private WheelDefinition _shownDefinition;
+
         #endregion
 
         #region Unity Runtime
@@ -57,16 +63,21 @@ namespace Vertigo.TestCase.UI
         private void OnDestroy()
         {
             _spinTween?.Kill();
+            _rotator.DOKill();
+            _title.rectTransform.DOKill();
         }
 
         #endregion
 
         #region Show Methods
 
-        //Sets the initial variables ands shows the wheel
+        //Sets the initial variables and shows the wheel. Punches when the wheel tier changes (bronze, silver, golden)
         public void Show(Wheel wheel)
         {
             var definition = wheel.Definition;
+            var tierChanged = _shownDefinition != null && _shownDefinition != definition;
+            _shownDefinition = definition;
+
             _baseImage.sprite = definition.BaseSprite;
             _indicatorImage.sprite = definition.IndicatorSprite;
             _title.text = definition.Title;
@@ -74,6 +85,12 @@ namespace Vertigo.TestCase.UI
 
             for (int i = 0; i < slots.Length; i++)
                 slots[i].Show(wheel.Slots[i], _bombSprite);
+
+            if (tierChanged)
+            {
+                _rotator.DOPunchScale(Vector3.one * 0.08f, 0.45f, 6, 0.6f);
+                _title.rectTransform.DOPunchScale(Vector3.one * 0.15f, 0.45f, 6, 0.6f);
+            }
         }
 
         #endregion
@@ -126,5 +143,10 @@ namespace Vertigo.TestCase.UI
 
         #endregion
         
+
+        public RectTransform GetSlotIcon(int slotIndex) => slots[slotIndex].IconTransform;
+
+        //Shakes the wheel when the bomb is hit. The bomb popup waits for it before opening
+        public void PlayBombHit() => _rotator.DOShakeAnchorPos(_bombShakeDuration, _bombShakeStrength, 25);
     }
 }

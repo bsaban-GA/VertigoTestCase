@@ -19,6 +19,9 @@ namespace Vertigo.TestCase.UI
         [SerializeField] private Button _giveUpButton;
         [SerializeField] private TMP_Text _reviveCost;
 
+        [SerializeField, Min(0f), Tooltip("Lets the wheel shake before the popup covers it. Keep equal to WheelView's shake duration")]
+        private float _openDelay = 0.5f;
+
         #endregion
 
         #region Actions
@@ -57,7 +60,7 @@ namespace Vertigo.TestCase.UI
         {
             _reviveCost.text = AmountFormatter.Format(cost);
             _reviveButton.interactable = canAfford;
-            Open();
+            Open(_openDelay);
         }
 
         #endregion

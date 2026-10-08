@@ -22,6 +22,8 @@ namespace Vertigo.TestCase.UI
         [SerializeField] private BombPopupView _bombPopup;
         [SerializeField] private ResultPopupView _resultPopup;
 
+        [SerializeField] private RewardFlyView _rewardFly;
+
         public StartScreenView StartScreen => _startScreen;
         public WheelView Wheel => _wheel;
         public ZoneBarView ZoneBar => _zoneBar;
@@ -30,5 +32,7 @@ namespace Vertigo.TestCase.UI
         public GameControlsView Controls => _controls;
         public BombPopupView BombPopup => _bombPopup;
         public ResultPopupView ResultPopup => _resultPopup;
+
+        public RewardFlyView RewardFly => _rewardFly;
     }
 }

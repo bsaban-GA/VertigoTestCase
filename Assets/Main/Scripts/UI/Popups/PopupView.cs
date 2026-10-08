@@ -51,8 +51,8 @@ namespace Vertigo.TestCase.UI
                 .OnComplete(() => gameObject.SetActive(false));
         }
 
-        // Subclasses fill in their content, then call Open.
-        protected void Open()
+        // Subclasses fill in their content, then call Open. The delay lets other feedback finish first
+        protected void Open(float delay = 0f)
         {
             _sequence?.Kill();
             gameObject.SetActive(true);
@@ -61,13 +61,16 @@ namespace Vertigo.TestCase.UI
             color.a = 0f;
             _dim.color = color;
             _animatedGroup.alpha = 0f;
-            _animatedGroup.interactable = true;
+            // Interactable only when fully open, so an invisible button can't be pressed during the delay
+            _animatedGroup.interactable = false;
             _animatedRoot.localScale = Vector3.one * 0.8f;
 
             _sequence = DOTween.Sequence()
                 .Join(_dim.DOFade(_dimAlpha, _duration))
                 .Join(_animatedGroup.DOFade(1f, _duration))
-                .Join(_animatedRoot.DOScale(1f, _duration).SetEase(Ease.OutBack));
+                .Join(_animatedRoot.DOScale(1f, _duration).SetEase(Ease.OutBack))
+                .SetDelay(delay)
+                .OnComplete(() => _animatedGroup.interactable = true);
         }
 
 

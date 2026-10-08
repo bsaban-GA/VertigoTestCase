@@ -22,6 +22,8 @@ namespace Vertigo.TestCase.UI
         [SerializeField, Tooltip("The icon place for the slot")] private Image _icon;
         [SerializeField, Tooltip("The amount text")] private TMP_Text _amount;
 
+        public RectTransform IconTransform => _icon.rectTransform;
+
         #endregion
 
         #region Unity Runtime

@@ -28,6 +28,9 @@ namespace Vertigo.TestCase.UI
         private RewardItemDefinition _shownItem;
         private int _shownAmount;
 
+        public RectTransform IconTransform => _icon.rectTransform;
+        public RewardItemDefinition Item => _shownItem;
+
         #endregion
 
         #region Unity Runtime
@@ -39,8 +42,8 @@ namespace Vertigo.TestCase.UI
 
         #endregion
 
-        //Fill the row of rewards and show them to player
-        public void Show(RewardStack reward)
+        //Fill the row of rewards and show them to player. The punch waits for the flying icon to land
+        public void Show(RewardStack reward, float highlightDelay)
         {
             var changed = reward.Item != _shownItem || reward.Amount != _shownAmount;
             _shownItem = reward.Item;
@@ -53,7 +56,7 @@ namespace Vertigo.TestCase.UI
             if (changed)
             {
                 _animatedRoot.DOKill(true);
-                _animatedRoot.DOPunchScale(Vector3.one * 0.25f, 0.35f, 6, 0.5f);
+                _animatedRoot.DOPunchScale(Vector3.one * 0.25f, 0.35f, 6, 0.5f).SetDelay(highlightDelay);
             }
         }
 

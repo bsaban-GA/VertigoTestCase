@@ -134,7 +134,14 @@ namespace Vertigo.TestCase.UI
         private void OnSpinResolved(SpinResult result)
         {
             if (result.IsBomb)
+            {
                 _views.Rewards.SetVisible(false);
+                _views.Wheel.PlayBombHit();
+                return;
+            }
+
+            var item = result.Slot.Reward.Item;
+            _views.RewardFly.Fly(item.Icon, _views.Wheel.GetSlotIcon(result.SlotIndex), _views.Rewards.GetFlyTarget(item));
         }
 
         private void OnStateChanged(GameState state)
